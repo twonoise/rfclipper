@@ -21,7 +21,7 @@ can be filtered out only if they can be correctly represented first. See _Figure
 
 Increasing **Fs** directly helps, and also reduces latency and baseband artifacts, but increases CPU usage. But exactly precision result, unlike of analog circuit, impossible anyway, due to it requires very high Fs.
 
-Note, we talk here about virtual (processing) **Fs**, not related to real DAC/ADC Fs. It is fine if JACK **Fs** is 384 kS/s while only 48 kHz allowed for i/o (h/w audio codec).
+Note, we talk here about processing **Fs**, it may not match with real DAC/ADC **Fs**. It is fine if JACK **Fs** is 384 kS/s while only 48 kHz allowed for i/o (h/w audio codec).
 
 The more **frequency "space"** for harmonics (this is Fs/2 minus baseband audio BW), the more precise result (so, less audio BW, better result). Less overdrive/dynamic is also directly related to precision. 
 
@@ -51,19 +51,21 @@ BUILD
   
 USAGE
 -----
-The realtime sound processing plugin we create, is intended to be used with so called _plugin hosts_ with **lv2** and **JACK** support, like **Ardour** (which is way more than just host, and you may find it quite useful). I've tested it with **Carla** plugin host. Please refer to its manuals how to add plugin and connect its input and output ports.
+The _realtime sound processing plugin_ we create, is intended to be used with so called _plugin hosts_ with **lv2** and **JACK** support, like **Ardour** (which is way more than just host, and you may find it quite useful). I've tested it with **Carla** plugin host. Or **jalv.gtk3** (**jalv.qt5**) may be used. Please refer to its manuals how to add plugin and connect its input and output ports. 
+
+Btw, default URI ("address" required by host to load our plugin) will be `https://faustlv2.bitbucket.io/rfclipper`.
 
 Please check [here](https://github.com/twonoise/jasmine-sa/?tab=readme-ov-file#above-192-kss) how to run JACK for higher Fs.
 
 PICTURES
 --------
-Let's look at .dsp code as it is, with its internal test signal source output connected to processing unit (**rfclipper**) input. You need to disconnect these two for real use. Note that eight output ports are in reversed order, unfortunately.
+Let's look at `.dsp` code as it is, with its internal test signal source output connected to processing unit (**rfclipper**) input. You need to disconnect these two for real use. Note that eight output ports are in reversed order, unfortunately.
 
 Block diargam built with https://faustide.grame.fr/ 
 
 ![rfclipper](https://github.com/user-attachments/assets/16f28c23-0388-4a30-b2b1-5055b6dfc576)
 
-Plot it all, with six testpoints. Note how violet one, hard limiter output, occupes entire frequency band; some part of this wideband energy will pass the following BPF, thus create some distortions. Note that light (near white) lines parts are overlay of several CRT rays.
+Plot it all, with six testpoints. Note how violet one, hard limiter output, occupes entire frequency band; some part of this wideband energy will pass the following BPF, thus create some distortions. Btw, light (near white) lines parts are overlay of several CRT rays.
 
 We will use 47.5 kHz heterodyne frequency for this picture. You may tune it for best result (least distortions or metal sound ghosts); it is not via code change, but via slider or knob offered with **plugin host**.
 
