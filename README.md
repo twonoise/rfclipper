@@ -32,3 +32,23 @@ Do not expect spectrally pure result for something more complex input than just 
 
 One may note that our receive heterodyne can be easily detuned (shifted) from transmit one. We welcome our reader to imagine what happens then, then test with real realtime setup.
 
+It can also be noted that same or better result should be possible using regular baseband DSP techniques, while one needs to be quite experienced with math, to rethink it all in baseband way. So, currently, it is demo mostly, due to it requires special mode of JACK engine, which is not supported by `qjackctl`, but only manually invoked.
+
+BUILD
+-----
+* `faust2lv2 rfclipper.dsp`
+* Place the newly created `rfclipper.lv2` folder contains plugin suite, to /usr/lib/lv2/ or similar place which your plugin host knows.
+  
+USAGE
+-----
+The realtime sound processing plugin we create, is intended to be used with so called _plugin hosts_ with **lv2** and **JACK** support, like **Ardour** (which is way more than just host, and you may find it quite useful). I've tested it with **Carla** plugin host. Please refer to its manuals how to add plugin and connect its input and output ports.
+
+Please check [here](https://github.com/twonoise/jasmine-sa/?tab=readme-ov-file#above-192-kss) how to run JACK for higher Fs.
+
+
+
+
+
+
+
+
