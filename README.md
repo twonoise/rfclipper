@@ -36,6 +36,10 @@ One may note that our receive heterodyne can be easily detuned (shifted) from tr
 
 It can also be noted that same or better result should be possible using regular baseband DSP techniques, while one needs to be quite experienced with math, to rethink it all in baseband way. So, currently, it is demo mostly, due to it requires special mode of JACK engine, which is not supported by `qjackctl`, but only manually invoked.
 
+> But i really need it, but without all these "radio" tricks.
+
+Well, it will work with regular 192k S/s. Narrower audio BW, and expect a bit more artifacts.
+
 BUILD
 -----
 * Please tune up your Faust for higher speed, like
