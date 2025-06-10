@@ -5,9 +5,11 @@ DESCRIPTION
 -----------
 _We assume that readers are well familiar with IF-LO-RF mixers and SSB approach._
 
-Original idea by Joachim Münch (**df4zs**) shown here:<br>
-https://www.qsl.net/df4zs/oszi.html<br>
-https://www.qsl.net/df4zs/index2.htm<br>
+Original idea by Joachim Münch (**df4zs**) shown here:
+
+> https://www.qsl.net/df4zs/oszi.html <br>
+> https://www.qsl.net/df4zs/index2.htm
+
 and consist of heterodyne-based transmitter and receiver, and (hard) limiter between them.
 
 The magic of this, at the point of view of modern DSP world, is that it makes _soft_ clipping while not have any _soft_ function. (It is more like compressor or normalize, but non-integrating, with momentary, per sample operation). If input is one tone, output will be one unity amplitude tone, without distortions using mentioned analog circuitry, and _almost_ without distortions using limited DSP math.
@@ -67,7 +69,7 @@ We will use 47.5 kHz heterodyne frequency for this picture. You may tune it for 
 
 Note how wide the frequency span: audible band is just tenth of screen.
 
-What else is interesting here? One may note that our ideal upconversion IF-LO-RF mixer (which is mathematically is just multiplier), orange (IF) to sky blue (RF), have 3 dB re:voltage conversion loss. It is 6 dB loss re:power, and is well known by "radio" people value for best passive mixers available.
+What else is interesting here? One may note that our ideal upconversion IF-LO-RF mixer (which mathematically is just multiplier), orange (IF) to sky blue (RF), have 3 dB re:voltage conversion loss. It is 6 dB loss re:power, and is well known by "radio" people value for best passive mixers available.
 
 ![plot-all](https://github.com/user-attachments/assets/b6a5c5b3-bd96-4283-9687-64532751188f)
 
