@@ -58,12 +58,21 @@ PICTURES
 Let's look at .dsp code as it is, with its internal test signal source output connected to processing unit (**rfclipper**) input. You need to disconnect these two for real use. Note that eight output ports are in reversed order, unfortunately.
 
 Block diargam built with https://faustide.grame.fr/ 
+
 ![rfclipper](https://github.com/user-attachments/assets/16f28c23-0388-4a30-b2b1-5055b6dfc576)
 
 Plot it all, with six testpoints. Note how violet one, hard limiter output, occupes entire frequency band; some part of this wideband energy will pass the following BPF, thus create some distortions. Note that light (near white) lines parts are overlay of several CRT rays.
+
+We will use 47.5 kHz heterodyne frequency for this picture. You may tune it for best result (least distortions or metal sound ghosts); it is not via code change, but via slider or knob offered with **plugin host**.
+
+Note how wide the frequency span: audible band is just tenth of screen.
+
+What else is interesting here? One may note that our ideal upconversion IF-LO-RF mixer (which is mathematically is just multiplier), orange (IF) to sky blue (RF), have 3 dB re:voltage conversion loss. It is 6 dB loss re:power, and is well known by "radio" people value for best passive mixers available.
+
 ![plot-all](https://github.com/user-attachments/assets/b6a5c5b3-bd96-4283-9687-64532751188f)
 
 Plot input and output only.
+
 ![plot-in-out](https://github.com/user-attachments/assets/26f39892-690e-4334-90ea-9269c2da785e)
 
 
