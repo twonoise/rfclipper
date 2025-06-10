@@ -43,20 +43,21 @@ BPF_TO = BPF_FROM + AUDIO_BW_HZ;
 
 /* For fine-tune it all. Note, you need hi-res spectrum analyzer for it.
  * If with oscope, just give like sum of 420 and 440 Hz. */
-testsrc = no.noise * 0.2,
-  os.osc(1000) * 0.3,
-  os.osc(1800) * 0.3,
-  os.osc(17500) * 0.1,
-  os.osc(18500) * 0.1  :> fi.lowpass(FLT_ORD, AUDIO_BW_HZ);
+testsrc = no.noise * 0.1,
+  os.osc(1000) * 0.316228, // -5 dBV
+  os.osc(1800) * 0.316228,
+  os.osc(17500) * 0.1, // -10 dBV
+  os.osc(18500) * 0.1  :>  fi.lowpass(FLT_ORD, AUDIO_BW_HZ);
 
 /* A bit weird look, but gives flat Faust diargam for book/paper.
  * Note six extra outputs coupled via '<:' for Spectrum Analyzer,
  * it's worth to connect hi-res SA to overdrive control. */
 process =
+  testsrc <:
 
 /* Upconversion. */
 /* We take unfiltered input. Should not have out-of-band stuff. */
-    testsrc * (LO_HZ:os.osc) <:
+  ( _ * (LO_HZ:os.osc) <:
 
 /* Take one of two SSBs (single side bands). */
   ( fi.bandpass(FLT_ORD, BPF_FROM, BPF_TO) <:
@@ -80,4 +81,4 @@ process =
   ( fi.lowpass(FLT_ORD, AUDIO_BW_HZ) : _
 
 /* Extra testpoint outputs, in reversed order (see Faust diagram). */
-  ),_ ),_ ),_ ),_ ),_ ),_ ;
+  ),_ ),_ ),_ ),_ ),_ ),_ ),_ ;
