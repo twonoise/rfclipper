@@ -36,8 +36,16 @@ It can also be noted that same or better result should be possible using regular
 
 BUILD
 -----
-* `faust2lv2 rfclipper.dsp`
-* Place the newly created `rfclipper.lv2` folder contains plugin suite, to /usr/lib/lv2/ or similar place which your plugin host knows.
+* Please tune up your Faust for higher speed, like
+
+      sed -i 's/192000/384000/' /usr/share/faust/platform.lib
+      sed -i 's/192000/384000/' /usr/share/faust/math.lib 
+  
+* Compile:
+
+      faust2lv2 -double rfclipper.dsp
+  
+* Place the newly created `rfclipper.lv2` **folder** contains plugin suite, to `/usr/lib/lv2/` or similar place which your **plugin host** knows.
   
 USAGE
 -----
