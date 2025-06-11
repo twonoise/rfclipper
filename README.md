@@ -1,4 +1,4 @@
-# rfclipper.dsp
+# rfclipper
 Radio frequency voice clipper demo with Faust, lv2, and JACK
 
 DESCRIPTION
@@ -78,11 +78,12 @@ Note how wide the frequency span: audible band is just tenth of screen.
 What else is interesting here? One may note that our ideal upconversion IF-LO-RF mixer (which mathematically is just multiplier), orange (IF) to sky blue (RF), have 3 dB re:voltage conversion loss. It is 6 dB loss re:power, and is well known by "radio" people value for best passive mixers available.
 
 ![plot-all](https://github.com/user-attachments/assets/b6a5c5b3-bd96-4283-9687-64532751188f)
+`jasmine-sa -O -M 4 -d -110,10,12,64 -h 0,192000,20,64 RFClipper:out7 RFClipper:out6 RFClipper:out5 RFClipper:out4 RFClipper:out3 RFClipper:out2 RFClipper:out1 RFClipper:out0`
 
 Plot input and output only.
 
 ![plot-in-out](https://github.com/user-attachments/assets/26f39892-690e-4334-90ea-9269c2da785e)
-
+`jasmine-sa -O -M 4 -d -40,10,5,64 -h 0,24000,20,64 RFClipper:out7 RFClipper:out0`
 
 
 
