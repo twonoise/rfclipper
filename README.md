@@ -12,7 +12,7 @@ Original idea by Joachim Münch (**df4zs**) shown here:
 
 and consist of heterodyne-based transmitter and receiver, and (hard) limiter between them.
 
-The magic of this, at the point of view of modern DSP world, is that it makes _soft_ clipping while not have any _soft_ function. (It is more like compressor or normalize, but non-integrating, with momentary, per sample operation). If input is one tone, output will be one unity amplitude tone, without distortions using mentioned analog circuitry, and _almost_ without distortions using limited DSP math.
+The magic of this, at the point of view of modern DSP world, is that it makes _soft_ clipping while not have any _soft_ function. (It is more like compressor or normalize, but non-integrating, with momentary, per sample operation). If input is one tone, output will be one unity amplitude tone, without distortions if using mentioned analog circuitry, and _almost_ without distortions when using limited DSP math.
 
 Hard limiter generates a lot of out-of-band harmonics, but they can be easily filtered out due to carrier frequency is much larger than baseband bandwidth.
 
@@ -69,7 +69,7 @@ Block diargam built with https://faustide.grame.fr/
 
 ![rfclipper](https://github.com/user-attachments/assets/16f28c23-0388-4a30-b2b1-5055b6dfc576)
 
-Plot it all, with six testpoints. Note how violet one, hard limiter output, occupes entire frequency band; some part of this wideband energy will pass the following BPF, thus create some distortions. Btw, light (near white) lines parts are overlay of several CRT rays.
+Plot it all, with six testpoints. Note how violet one, hard limiter output, occupies entire frequency band; some part of this wideband energy will pass the following BPF, thus create some distortions. Btw, light (near white) lines parts are overlay of several CRT rays.
 
 We will use 47.5 kHz heterodyne frequency for this picture. You may tune it for best result (least distortions or metal sound ghosts); it is not via code change, but via slider or knob offered with **plugin host**.
 
