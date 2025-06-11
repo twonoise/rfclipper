@@ -2,7 +2,7 @@ declare name "RFClipper"; // No spaces for better JACK port names.
 declare version "0.01";
 declare author "jpka";
 declare license "MIT";
-declare description "See readme at github.com/twonoise/rfclipper.dsp";
+declare description "See readme at github.com/twonoise/rfclipper";
 
 import("stdfaust.lib");
 
