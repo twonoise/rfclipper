@@ -19,7 +19,7 @@ AUDIO_BW_HZ = hslider("BW Hz", 20000, 1000, 20000, 1000);
  * NOTE It is rarely possible to realtime filter order change,
  * not only with Faust, but other syntheziers like VHDL/Verilog. */
 // This gives 'stack overflow in eval' at fi.bandpass build.
-// FLT_ORD = hslider("FLT Ord", 33, 10, 33, 1);
+// FLT_ORD = nentry("FLT Ord", 33, 10, 33, 1) : int;
 FLT_ORD = 33;
 
 /* Local oscillator, or Heterodyne. Fine-tune it for specific setup,
