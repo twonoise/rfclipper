@@ -36,7 +36,7 @@ One may note that our receive heterodyne can be easily detuned (shifted) from tr
 
 It can also be noted that same or better result should be possible using regular baseband DSP techniques, while one needs to be quite experienced with math, to rethink it all in baseband way. So, currently, it is demo mostly, due to it requires special mode of JACK engine, which is not supported by `qjackctl`, but only manually invoked.
 
-> But i really need it, but without all these "radio" tricks! :-[]
+> But i really need it, but without all these "_radio_" tricks! **:-[ ]**
 
 Well, it will work with regular 192k S/s. Narrower audio BW, and expect a bit more artifacts.
 
@@ -95,6 +95,9 @@ Plot input and output only.
       
 </details>
 
+Real use, sum of 420 and 440 Hz clipping, with [Simple Scope](http://gareus.org/oss/lv2/sisco#Stereo).
+
+![420_440_scope](https://github.com/user-attachments/assets/9463303c-1a40-4015-8564-a4e73e9c8158)
 
 
 
