@@ -44,7 +44,7 @@ A bit more on filtering
 -----------------------
 
 This digital processing unit, as well as classic analog single side band (_SSB_) radios, are never possible without frequency filtering. We have filters before and after every frequency conversion (mixer); also, after limiter. There are either _LPF_ (low pass) and _BPF_ (band pass) filters. As with analog LC filtering, digital ones have exactly same property: The **more quality** (more rectangular or "sharp") is filter, the **more delay** it introduces. <br>
-We use 33rd order filtering in our demo, any you welcome to tune it up to balance between delay and sound quality.
+We use 33rd order filtering in our demo, and you welcome to tune it up to balance between delay and sound quality.
 
 BUILD
 -----
