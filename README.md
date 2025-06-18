@@ -40,11 +40,16 @@ It can also be noted that same or better result should be possible using regular
 
 Well, it will work with regular 192k S/s. Narrower audio BW, and expect a bit more artifacts.
 
-A bit more on filtering
------------------------
+A bit more on filtering...
+--------------------------
 
 This digital processing unit, as well as classic analog single side band (_SSB_) radios, are never possible without frequency filtering. We have filters before and after every frequency conversion (mixer); also, after limiter. There are either _LPF_ (low pass) and _BPF_ (band pass) filters. As with analog LC filtering, digital ones have exactly same property: The **more quality** (more rectangular or "sharp") is filter, the **more delay** it introduces. <br>
 We use 33rd order filtering in our demo, and you welcome to tune it up to balance between delay and sound quality.
+
+...and on mixer
+---------------
+
+Sound recording engineers often use _mixer_ term for **sum** of signals, and it's better if it is perfectly **linear**. We use _mixer_ term here as radio crowd, when it is a **multiplication**, which is perfectly **non-linear**. Btw, this unit known by music people as **modulator**, and by radio people also as **amplitude modulator**.
 
 BUILD
 -----
