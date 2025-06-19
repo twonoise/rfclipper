@@ -34,7 +34,7 @@ Do not expect spectrally pure result for something more complex input than just 
 
 One may note that our receive heterodyne can be easily detuned (shifted) from transmit one. We welcome our reader to imagine what happens then, then test with real realtime setup.
 
-It can also be noted that same or better result should be possible using regular baseband DSP techniques, while one needs to be quite experienced with math, to rethink it all in baseband way. So, currently, it is demo mostly, due to it requires special mode of JACK engine, which is not supported by `qjackctl`, but only manually invoked.
+It can also be noted that same or better result should be possible using regular baseband DSP techniques, while one needs to be quite experienced with math, to rethink it all in baseband way: at least, _complex numbers_ are needed, i think. So, currently, it is demo mostly, due to it requires special mode of JACK engine, which is not supported by `qjackctl`, but only manually invoked.
 
 > But i really need it, but without all these "_radio_" tricks! **:-[ ]**
 
