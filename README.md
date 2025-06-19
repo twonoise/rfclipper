@@ -49,7 +49,7 @@ We use 33rd order filtering in our demo, and you welcome to tune it up to balanc
 ...and on mixer
 ---------------
 
-Sound recording engineers often use _mixer_ term for **sum** of signals, and it's better if it is perfectly **linear**. We use _mixer_ term here as radio crowd, when it is a **multiplication**, which is perfectly **non-linear**. Btw, this unit known by music people as **modulator**, and by radio people also as **amplitude modulator**.
+Sound recording engineers often use _mixer_ term for **sum** of signals, and it's better if it is perfectly **linear**. We use _mixer_ term here as radio crowd, when it is a **multiplication**, which is perfectly **non-linear**. Btw, this unit known by music people as _modulator_, and by radio people also as _amplitude modulator_.
 
 BUILD
 -----
