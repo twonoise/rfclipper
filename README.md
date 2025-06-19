@@ -110,7 +110,11 @@ Real use, sum of 420 and 440 Hz clipping, with [Simple Scope](http://gareus.org/
 
 ![420_440_scope](https://github.com/user-attachments/assets/9463303c-1a40-4015-8564-a4e73e9c8158)
 
+CREDITS
+-------
+Thanks to [gordonjcp](https://gjcp.net/author/gordonjcp.html) for giving me an idea and original URL.
 
+Thanks to all linux and audio dev teams for their valuable work and support.
 
 
 
