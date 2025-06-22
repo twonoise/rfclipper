@@ -66,7 +66,7 @@ BUILD
   
 USAGE
 -----
-The _realtime sound processing plugin_ we create, is intended to be used with so called _plugin hosts_ with **lv2** and **JACK** support, like **Ardour** (which is way more than just host, and you may find it quite useful). I've tested it with **Carla** plugin host. Or **jalv.gtk3** (**jalv.qt5**) may be used. Please refer to its manuals how to add plugin and connect its input and output ports. 
+The _realtime sound processing plugin_ we create, is intended to be used with so called _plugin hosts_ with **lv2** and **JACK** support, like **Ardour** (which is way more than just host, and you may find it quite useful). I've tested it with **[Carla](https://github.com/twonoise/carla-patches)** plugin host. Or **jalv.gtk3** (**jalv.qt5**) may be used. Please refer to its manuals how to add plugin and connect its input and output ports. 
 
 Btw, default URI ("address" required by host to load our plugin) will be `https://faustlv2.bitbucket.io/rfclipper`.
 
