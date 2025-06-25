@@ -62,7 +62,7 @@ BUILD
 
       faust2lv2 -double rfclipper.dsp
   
-* Place the newly created `rfclipper.lv2` **folder** contains plugin suite, to `/usr/lib/lv2/` or similar place which your **plugin host** knows.
+* Place the newly created `rfclipper.lv2` **folder** contains plugin suite, to `/usr/local/lib/lv2/` or similar place which your **plugin host** knows.
   
 USAGE
 -----
