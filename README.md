@@ -14,7 +14,7 @@ and consist of heterodyne-based transmitter and receiver, and (hard) limiter bet
 
 The magic of this, at the point of view of modern DSP world, is that it makes _soft_ clipping while not have any _soft_ function. (It is more like compressor or normalize, but non-integrating, with momentary, per sample operation). If input is one tone, output will be one unity amplitude tone, without distortions if using mentioned analog circuitry, and _almost_ without distortions when using limited DSP math.
 
-Hard limiter generates a lot of out-of-band harmonics, but they can be easily filtered out due to carrier frequency is much larger than baseband bandwidth.
+Hard limiter generates a lot of out-of-band harmonics, but they can be easily filtered out due to carrier frequency is way higher than baseband bandwidth.
 
 Here is the difference between analog and sampled system. Analog harmonics can be eliminated completely. This is impossible with DSP-based design, because it have well limited BW and it is **Fs/2**. All harmonics which _can not be represented with current Fs_, are aliased and can fall back to **RF** band, which makes result not exactly precise. In other words, harmonic
 can be filtered out only if they can be correctly represented first. See _Figure 2_ here https://www.soundonsound.com/sound-advice/q-what-aliasing-and-what-causes-it
@@ -25,7 +25,7 @@ Note, we talk here about processing **Fs**, it may not match with real DAC/ADC *
 
 The more **frequency "space"** for harmonics (this is Fs/2 minus baseband audio BW), the more precise result (so, less audio BW, better result). Less overdrive/dynamic is also directly related to precision. 
 
-It can be noted that using soft limiter, instead of our hard one, not helps, but just eats CPU; but still need more tests. *TODO*
+It can be noted that using some soft limiter function, instead of our hard one, not helps, but just eats CPU; but still need more tests. *TODO*
 
 Here is not classic SSB processing used, but simpler substitution like on https://i.sstatic.net/65PtJ99B.png , it's mostly re-create of 2nd Nyquist alias. The difference is exactly zero gap between lower and upper sidebands at **RF**, it can lead to reduce of some very low frequencies, because one SSB should be filtered out with very sharp,
 but still not ideal band pass filter.
